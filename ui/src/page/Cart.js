@@ -31,7 +31,7 @@ const Cart = () => {
     <div className='p-2 md:p-4'>
         <h2 className='text-lg md:tsxt-2xl font-bold text-slate-600'>Your cart items</h2>
         
-        <div className='my-4 flex gap-3'>
+        <div className='my-4 sm:flex sm:flex-row md:flex-col gap-3'>
 
             { productCartItem.length > 0 ?
               <div className='w-full max-w-3xl'>

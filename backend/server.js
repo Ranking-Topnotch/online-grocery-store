@@ -7,9 +7,8 @@ const productDetails = require('./model/productModels')
 
 
 
-
-const accountSid = 'AC5d7bba2f55ca7e7bdd1e9fae4177464f';
-const authToken = 'f648b054a4032c77ee10dcff26cab401';
+const accountSid = process.env.TWILIO_CONNECTION_STRING;
+const authToken = process.env.TWILIO_AUTH_STRING;
 const client = require('twilio')(accountSid, authToken);
 
 
@@ -134,3 +133,5 @@ app.post('/purchase', (req,res) => {
 app.listen(PORT, ()=>{
     console.log(`server is running at ${PORT}`)
 })
+
+
